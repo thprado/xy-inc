@@ -1,0 +1,52 @@
+{
+  "name": "xy-inc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thprado/xy-inc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thprado/xy-inc/issues"
+  },
+  "homepage": "https://github.com/thprado/xy-inc#readme",
+  "jest": {
+    "testEnviroment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "mongoose": "4.13.9",
+    "restify": "6.3.4",
+    "restify-errors": "5.0.0",
+    "tslint": "^5.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "22.1.2",
+    "@types/mongoose": "4.7.32",
+    "@types/restify": "5.0.6",
+    "@types/supertest": "2.0.4",
+    "jest": "22.4.2",
+    "supertest": "3.0.0",
+    "ts-jest": "22.0.4",
+    "typescript": "2.6.2"
+  }
+}

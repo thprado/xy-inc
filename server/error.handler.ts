@@ -8,11 +8,6 @@ export const handleError = (req: restify.Request, resp: restify.Response, err, d
 	}
 
 	switch (err.name) {
-		case 'MongoError':
-			if (err.code == 11000) {
-				err.statusCode = 400
-			}
-			break
 		case 'ValidationError':
 			err.statusCode = 400
 			// - Iterating in errors messages

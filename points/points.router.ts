@@ -46,25 +46,6 @@ class PointsRouter extends Router {
 				.then(this.render(resp, next))
 				.catch(next)
 		})
-
-		// - Update some Poi
-		application.put('/points/:id', (req, resp, next) => {
-			// - Tell to Mongoose, you want overwrite that document
-			const options = { overwrite: true }
-			// - Do the update
-			Point.update({ _id: req.params.id }, req.body, options)
-				.exec().then(result => {
-					if (result.n) {
-						// - Return the object updated
-						return Point.findById(req.params.id)
-					} else {
-						throw new NotFoundError('Document not found')
-					}
-				})
-				.then(this.render(resp, next))
-				.catch(next)
-				
-		})
 	}
 }
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon dist/main.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   },
   "homepage": "https://github.com/thprado/xy-inc#readme",
   "jest": {
-    "testEnviroment": "node",
+    "testEnvironment": "node",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },

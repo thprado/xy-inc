@@ -16,14 +16,14 @@ const PointsSchema = new mongoose.Schema({
 		required: true,
 		validate: {
 			validator: function (value) {
-				if (value.length > 2) {
-					return false;
-				} else {
-					for (var i = 0; i < value.length; i++) {
-						if (value[i] <= 0 || isNaN(value[i])) {
+				if (Array.isArray(value) && value.length == 2 && !value.some(isNaN)) {
+					for (let i = 0; i < value.length; i++) {
+						if (value[i] < 0) {
 							return false;
 						}
 					}
+				} else {
+					return false;
 				}
 				return true;
 			},

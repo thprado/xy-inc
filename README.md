@@ -50,7 +50,7 @@ npm test
 
 
 | Método | Rota | Parâmetros | Descrição | Exemplo
-|----------------|---------------------------|----|---------------|--------------|
+|---|-----------|----------------------------|------------------------------|----------|
 |POST|`/points`            | { "name": string, coordinates: [Number,Number}            | Criação de um novo ponto de interesse. Apenas valores positivos. | { "name": "Banco", "coordinates": [15,10] }
 |GET |`/points`            |            | Listagem de todos os pontos de interesse.|
 |GET |`/points/_id`| Query: ID da base de dados| Listagem de um POI específico por ID do MongoDB.| http://localhost:3000/points/5b46ef4b72ef8a2c7488db07 |
